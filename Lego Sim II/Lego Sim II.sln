@@ -1,0 +1,23 @@
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2008
+
+Project("{EC4069C1-03E1-3E05-B4D7-CCBC072299C1}") = "Lego Sim II", "Assembly-CSharp.csproj", "{175F9870-5D35-62D0-62C2-6262AF18741C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{175F9870-5D35-62D0-62C2-6262AF18741C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{175F9870-5D35-62D0-62C2-6262AF18741C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{175F9870-5D35-62D0-62C2-6262AF18741C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{175F9870-5D35-62D0-62C2-6262AF18741C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		StartupItem = Assembly-CSharp.csproj
+	EndGlobalSection
+EndGlobal

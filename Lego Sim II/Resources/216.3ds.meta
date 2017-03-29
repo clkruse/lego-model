@@ -1,0 +1,242 @@
+fileFormatVersion: 2
+guid: a5eb355aa9eac4489ab8e79f43129eba
+timeCreated: 1481305430
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: m_000001
+    100004: m_000002
+    100006: m_000003
+    100008: m_000004
+    100010: m_000005
+    100012: m_000006
+    100014: m_000006 1
+    100016: m_000006 2
+    100018: m_000007
+    100020: m_000007 1
+    100022: m_000008
+    100024: m_000008 1
+    100026: m_000008 2
+    100028: m_000009
+    100030: m_000009 1
+    100032: m_000010
+    100034: m_000011
+    100036: m_000011 1
+    100038: m_000012
+    100040: m_000012 1
+    100042: m_000013
+    100044: m_000013 1
+    100046: m_000014
+    100048: m_000014 1
+    100050: m_000015
+    100052: m_000016
+    100054: m_000016 1
+    100056: m_000016 2
+    100058: m_000016 3
+    100060: m_000017
+    100062: m_000018
+    100064: m_000019
+    100066: m_000020
+    400000: //RootNode
+    400002: m_000001
+    400004: m_000002
+    400006: m_000003
+    400008: m_000004
+    400010: m_000005
+    400012: m_000006
+    400014: m_000006 1
+    400016: m_000006 2
+    400018: m_000007
+    400020: m_000007 1
+    400022: m_000008
+    400024: m_000008 1
+    400026: m_000008 2
+    400028: m_000009
+    400030: m_000009 1
+    400032: m_000010
+    400034: m_000011
+    400036: m_000011 1
+    400038: m_000012
+    400040: m_000012 1
+    400042: m_000013
+    400044: m_000013 1
+    400046: m_000014
+    400048: m_000014 1
+    400050: m_000015
+    400052: m_000016
+    400054: m_000016 1
+    400056: m_000016 2
+    400058: m_000016 3
+    400060: m_000017
+    400062: m_000018
+    400064: m_000019
+    400066: m_000020
+    2300000: m_000001
+    2300002: m_000002
+    2300004: m_000003
+    2300006: m_000004
+    2300008: m_000005
+    2300010: m_000006
+    2300012: m_000006 1
+    2300014: m_000006 2
+    2300016: m_000007
+    2300018: m_000007 1
+    2300020: m_000008
+    2300022: m_000008 1
+    2300024: m_000008 2
+    2300026: m_000009
+    2300028: m_000009 1
+    2300030: m_000010
+    2300032: m_000011
+    2300034: m_000011 1
+    2300036: m_000012
+    2300038: m_000012 1
+    2300040: m_000013
+    2300042: m_000013 1
+    2300044: m_000014
+    2300046: m_000014 1
+    2300048: m_000015
+    2300050: m_000016
+    2300052: m_000016 1
+    2300054: m_000016 2
+    2300056: m_000016 3
+    2300058: m_000017
+    2300060: m_000018
+    2300062: m_000019
+    2300064: m_000020
+    3300000: m_000001
+    3300002: m_000002
+    3300004: m_000003
+    3300006: m_000004
+    3300008: m_000005
+    3300010: m_000006
+    3300012: m_000006 1
+    3300014: m_000006 2
+    3300016: m_000007
+    3300018: m_000007 1
+    3300020: m_000008
+    3300022: m_000008 1
+    3300024: m_000008 2
+    3300026: m_000009
+    3300028: m_000009 1
+    3300030: m_000010
+    3300032: m_000011
+    3300034: m_000011 1
+    3300036: m_000012
+    3300038: m_000012 1
+    3300040: m_000013
+    3300042: m_000013 1
+    3300044: m_000014
+    3300046: m_000014 1
+    3300048: m_000015
+    3300050: m_000016
+    3300052: m_000016 1
+    3300054: m_000016 2
+    3300056: m_000016 3
+    3300058: m_000017
+    3300060: m_000018
+    3300062: m_000019
+    3300064: m_000020
+    4300000: m_000001
+    4300002: m_000002
+    4300004: m_000003
+    4300006: m_000004
+    4300008: m_000005
+    4300010: m_000006
+    4300012: m_000006
+    4300014: m_000006
+    4300016: m_000007
+    4300018: m_000007
+    4300020: m_000008
+    4300022: m_000008
+    4300024: m_000008
+    4300026: m_000009
+    4300028: m_000009
+    4300030: m_000010
+    4300032: m_000011
+    4300034: m_000011
+    4300036: m_000012
+    4300038: m_000012
+    4300040: m_000013
+    4300042: m_000013
+    4300044: m_000014
+    4300046: m_000014
+    4300048: m_000015
+    4300050: m_000016
+    4300052: m_000016
+    4300054: m_000016
+    4300056: m_000016
+    4300058: m_000017
+    4300060: m_000018
+    4300062: m_000019
+    4300064: m_000020
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
