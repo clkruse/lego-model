@@ -1,6 +1,3 @@
-#http://www.pyimagesearch.com/2015/05/25/basic-motion-detection-and-tracking-with-python-and-opencv/
-
-# import the necessary packages
 import argparse
 import datetime
 import imutils
@@ -12,6 +9,7 @@ ap = argparse.ArgumentParser()
 ap.add_argument("-v", "--video", help="path to the video file")
 ap.add_argument("-a", "--min-area", type=int, default=500, help="minimum area size")
 args = vars(ap.parse_args())
+# Initializing variables used for calculations
 count = 0
 rectnumber = 0
 framenum = 1
@@ -20,13 +18,6 @@ framenum = 1
 if args.get("video", None) is None:
     camera = cv2.VideoCapture(0)
     time.sleep(0.25)
-
-# otherwise, we are reading from a video file
-else:
-    camera = cv2.VideoCapture(args["video"])
-
-# initialize the first frame in the video stream
-firstFrame = None
 
 # loop over the frames of the video
 while True:
@@ -52,6 +43,7 @@ while True:
         firstFrame = gray
         continue
 
+
     # compute the absolute difference between the current frame and
     # first frame
     frameDelta = cv2.absdiff(firstFrame, gray)
@@ -60,8 +52,8 @@ while True:
     # dilate the thresholded image to fill in holes, then find contours
     # on thresholded image
     thresh = cv2.dilate(thresh, None, iterations=2)
+    # Below line is for cv2. In open cv 3 you need to give room to call three sources as showin in the second line below
     # (cnts, _) = cv2.findContours(thresh.copy(), cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
-    # Below line supposedly fix the error that I'm having
     (_, cnts, _) = cv2.findContours(thresh.copy(), cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
 
     # loop over the contours
@@ -81,7 +73,7 @@ while True:
         #         count += 1
         cv2.rectangle(frame, (x, y), (x + w, y + h), (255, 0, 0), 2)
 
-        rectsize = (abs(w-x)*abs(h-y))
+        rectsize = (abs(w - x) * abs(h - y))
         # rectloc =
 
         text = "I see you!"
@@ -89,14 +81,13 @@ while True:
         # cv2.imwrite("frame%d.jpg" % count, frame)
         rectnumber += 1
         print "Rectangle " + str(rectnumber), str(rectsize) + " pixels"
-
     # draw the text and timestamp on the frame
     print "number of rectangles: " + str(rectnumber)
 
     cv2.putText(frame, "Hello, {}".format(text), (10, 20),
-        cv2.FONT_HERSHEY_SIMPLEX, 0.5, (255, 0, 0), 2)
+                cv2.FONT_HERSHEY_SIMPLEX, 0.5, (255, 0, 0), 2)
     cv2.putText(frame, datetime.datetime.now().strftime("%A %d %B %Y %I:%M:%S%p"),
-        (10, frame.shape[0] - 10), cv2.FONT_HERSHEY_SIMPLEX, 0.35, (255, 255, 255), 1)
+                (10, frame.shape[0] - 10), cv2.FONT_HERSHEY_SIMPLEX, 0.35, (255, 255, 255), 1)
 
     # show the frame and record if the user presses a key
     cv2.imshow("Threshold", thresh)
