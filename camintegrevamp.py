@@ -13,11 +13,20 @@ args = vars(ap.parse_args())
 count = 0
 rectnumber = 0
 framenum = 1
+rectlist = []
+xlist = []
 
 # if the video argument is None, then we are reading from webcam
 if args.get("video", None) is None:
     camera = cv2.VideoCapture(0)
     time.sleep(0.25)
+
+# otherwise, we are reading from a video file
+else:
+    camera = cv2.VideoCapture(args["video"])
+
+# initialize the first frame in the video stream
+firstFrame = None
 
 # loop over the frames of the video
 while True:
@@ -62,19 +71,12 @@ while True:
         if cv2.contourArea(c) < args["min_area"]:
             continue
 
-        # compute the bounding box for the contour, draw it on the frame,
-        # and update the text
+        # compute the bounding box for the contour
         (x, y, w, h) = cv2.boundingRect(c)
-        # What does this do. Why don't I annotate code when I write it?
-        # if y != h:
-        #     if x != w:
-        #         cv2.imwrite("frame%d.jpg" % count, frame[x:x+w,y:y+h])
-        #         print('written')
-        #         count += 1
-        cv2.rectangle(frame, (x, y), (x + w, y + h), (255, 0, 0), 2)
-
+        # add this bounding box to rectlist
+        rectlist.append([x, y, w, h])
+        # Calculating rectangle size
         rectsize = (abs(w - x) * abs(h - y))
-        # rectloc =
 
         text = "I see you!"
         # This takes screenshots of every frame of video
@@ -83,7 +85,23 @@ while True:
         print "Rectangle " + str(rectnumber), str(rectsize) + " pixels"
     # draw the text and timestamp on the frame
     print "number of rectangles: " + str(rectnumber)
+    print "list is: " + str(rectlist)
 
+    # makes list of y values
+    for r in rectlist:
+        xlist.append(r[0])
+
+    # defines largest y value when I did this with x values it picked the one that was highest
+    if len(xlist) != 0:
+        mn = min(xlist)
+    # draw draw contour rectangles. the rightmost one should be a different color
+    for r in rectlist:
+        if r[0] == mn:
+            cv2.rectangle(frame, (r[0], r[1]), (r[0] + r[2], r[1] + r[3]), (0, 0, 255), 2)
+        else:
+            cv2.rectangle(frame, (r[0], r[1]), (r[0] + r[2], r[1] + r[3]), (255, 0, 0), 2)
+
+    #adding cosmetic texts
     cv2.putText(frame, "Hello, {}".format(text), (10, 20),
                 cv2.FONT_HERSHEY_SIMPLEX, 0.5, (255, 0, 0), 2)
     cv2.putText(frame, datetime.datetime.now().strftime("%A %d %B %Y %I:%M:%S%p"),
@@ -99,6 +117,8 @@ while True:
         break
     framenum += 1
     rectnumber = 0
+    rectlist = []
+    xlist= []
 
 # cleanup the camera and close any open windows
 camera.release()
