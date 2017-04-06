@@ -15,6 +15,8 @@ rectnumber = 0
 framenum = 1
 rectlist = []
 xlist = []
+mn = 0
+prevmn = 0
 
 # if the video argument is None, then we are reading from webcam
 if args.get("video", None) is None:
@@ -98,6 +100,9 @@ while True:
     for r in rectlist:
         if r[0] == mn:
             cv2.rectangle(frame, (r[0], r[1]), (r[0] + r[2], r[1] + r[3]), (0, 0, 255), 2)
+            if mn - prevmn > 25:
+                cv2.imwrite("rect%d.jpg" % count, frame[r[0]:r[0] + r[2], r[1]:r[1] + r[3]])
+                count += 1
         else:
             cv2.rectangle(frame, (r[0], r[1]), (r[0] + r[2], r[1] + r[3]), (255, 0, 0), 2)
 
@@ -106,6 +111,11 @@ while True:
                 cv2.FONT_HERSHEY_SIMPLEX, 0.5, (255, 0, 0), 2)
     cv2.putText(frame, datetime.datetime.now().strftime("%A %d %B %Y %I:%M:%S%p"),
                 (10, frame.shape[0] - 10), cv2.FONT_HERSHEY_SIMPLEX, 0.35, (255, 255, 255), 1)
+
+    # prints minimum x value
+
+    print mn
+
 
     # show the frame and record if the user presses a key
     cv2.imshow("Threshold", thresh)
@@ -119,6 +129,7 @@ while True:
     rectnumber = 0
     rectlist = []
     xlist= []
+    prevmn = mn
 
 # cleanup the camera and close any open windows
 camera.release()

@@ -73,7 +73,7 @@ while True:
         # compute the bounding box for the contour, draw it on the frame,
         # and update the text
         (x, y, w, h) = cv2.boundingRect(c)
-        # What does this do. Why don't I annotate code when I write it?
+        # Takes snapshot of rectangle
         # if y != h:
         #     if x != w:
         #         cv2.imwrite("frame%d.jpg" % count, frame[x:x+w,y:y+h])
