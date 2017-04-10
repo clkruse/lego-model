@@ -20,7 +20,7 @@ prevmn = 0
 
 # if the video argument is None, then we are reading from webcam
 if args.get("video", None) is None:
-    camera = cv2.VideoCapture(0)
+    camera = cv2.VideoCapture("/Users/me/Documents/GitHub/lego-model/pieces on conveyor slow.mov")
     time.sleep(0.25)
 
 # otherwise, we are reading from a video file
@@ -99,7 +99,9 @@ while True:
     # draw draw contour rectangles. the rightmost one should be a different color
     for r in rectlist:
         if r[0] == mn:
+            # draws red rectangle on the rightmost(rectangle)
             cv2.rectangle(frame, (r[0], r[1]), (r[0] + r[2], r[1] + r[3]), (0, 0, 255), 2)
+            # if the right most rectangle has changed since the last frame take snapshot
             if mn - prevmn > 25:
                 cv2.imwrite("rect%d.jpg" % count, frame[r[0]:r[0] + r[2], r[1]:r[1] + r[3]])
                 count += 1

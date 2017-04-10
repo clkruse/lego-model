@@ -18,7 +18,7 @@ framenum = 1
 
 # if the video argument is None, then we are reading from webcam
 if args.get("video", None) is None:
-    camera = cv2.VideoCapture(0)
+    camera = cv2.VideoCapture("/Users/me/Documents/GitHub/lego-model/pieces on conveyor slow.mov")
     time.sleep(0.25)
 
 # otherwise, we are reading from a video file
@@ -74,11 +74,10 @@ while True:
         # and update the text
         (x, y, w, h) = cv2.boundingRect(c)
         # Takes snapshot of rectangle
-        # if y != h:
-        #     if x != w:
-        #         cv2.imwrite("frame%d.jpg" % count, frame[x:x+w,y:y+h])
-        #         print('written')
-        #         count += 1
+        if y != h:
+            if x != w:
+                # cv2.imwrite("frame%d.jpg" % count, frame[x:x + w, y:y + h])
+                count += 1
         cv2.rectangle(frame, (x, y), (x + w, y + h), (255, 0, 0), 2)
 
         rectsize = (abs(w-x)*abs(h-y))
