@@ -3,9 +3,8 @@
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets/HiResScreenShots.cs">
     <Files>
       <File FileName="Assets/SpawnManager.cs" Line="1" Column="1" />
-      <File FileName="Assets/HiResScreenShots.cs" Line="27" Column="21" />
+      <File FileName="Assets/HiResScreenShots.cs" Line="18" Column="18" />
       <File FileName="Assets/General.cs" Line="1" Column="1" />
-      <File FileName="../Lego Simulator/Assets/screenshot.js" Line="1" Column="1" />
       <File FileName="Assets/SpawnMethod2.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>

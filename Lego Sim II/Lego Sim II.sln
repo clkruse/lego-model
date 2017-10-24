@@ -1,7 +1,7 @@
+﻿
 Microsoft Visual Studio Solution File, Format Version 11.00
-# Visual Studio 2008
-
-Project("{EC4069C1-03E1-3E05-B4D7-CCBC072299C1}") = "Lego Sim II", "Assembly-CSharp.csproj", "{175F9870-5D35-62D0-62C2-6262AF18741C}"
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lego Sim II", "Assembly-CSharp.csproj", "{175F9870-5D35-62D0-62C2-6262AF18741C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
